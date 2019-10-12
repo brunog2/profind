@@ -1,0 +1,239 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.indice-container{
+    height: 100%
+}
+
+.main{
+    height: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background: #f5f5f5;
+    align-items: center;
+}
+
+.nav-link{
+    margin: 10px;
+}
+
+.logo{
+    width: 120px;
+}
+
+.navbar-button{
+    font-size: 14px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    color: #43c4f7;
+    height: 44px;
+    width: 60px;
+    border: none;
+    border-radius: 5px
+}
+
+.navbar-button-destaque{
+    width: 100px;
+    transition: 300ms;
+    background-color: #ffffff00;
+    color: #43c4f7;
+    border: solid 2px #43c4f7;
+}
+
+.navbar-button-destaque:hover{
+    transition: 300ms;
+    background-color: #43c4f7;
+    color: #ffffff;
+    border: solid 2px #43c4f7;
+}
+
+.parallax{
+    background-image: url("https://www.homer.com.br/blog/wp-content/uploads/2015/01/atendimento-corretorvip.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-content{
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-content-item{
+    margin: 5px 0 5px 0;
+    color: white;
+}
+
+.bt-encontrar{  
+    transition: 300ms;
+    font-size: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+    border: solid 2px #43c4f7;
+    border-radius: 5px
+}
+
+.bt-encontrar:hover{
+    transition: 300ms;
+    background-color: #43c4f7;
+    color: #ffffff;
+    border: solid 2px #43c4f7;
+}
+
+.bt-encontrar-prof{  
+    transition: 300ms;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    width: 150px;
+    background-color: #43c4f7;
+    border: solid 2px #43c4f7;
+    border-radius: 5px
+}
+
+.bt-encontrar-prof:hover{
+    transition: 300ms;
+    background-color: #23bcf8;
+    color: white;
+    border: solid 2px #23bcf8;
+}
+
+.container-profissionais{
+    padding: 25px;
+}
+
+.container-profissionais-container-botao{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-profissionais-container-botao .bt-encontrar-prof{
+    height: 65px;
+    width: 280px;
+}
+
+
+.container-profissionais-titulo{
+    text-align: center;
+    font-size: 32px;
+}
+
+.parallax-2{
+    background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
+    
+    height: 50%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-2-container-1 p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    
+}
+
+.parallax-2-container-1{
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-content-item{
+    margin: 5px 0 5px 0;
+    color: white;
+}
+
+.container-instrucoes{
+    display: flex;    
+    width: 100%;
+    background-color: white;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+
+.container-instrucoes .container-instrucoes-card{
+    margin: 65px;
+    font-family: sans-serif;
+    background-color: #D4EBFA; 
+    display: flex;
+    padding: 15px;
+    line-height: 25px;
+    flex-direction: column;
+    text-align: left;
+    height: 400px;
+    border-radius: 8px;
+    width: 25%;
+    max-width: 650px;
+    min-width: 280px;
+}
+
+.container-instrucoes .container-instrucoes-card h2{
+    margin-bottom: 25px;
+}
+
+.container-instrucoes .container-instrucoes-card p{
+    margin-bottom: 15px;
+}
+
+.border-separator{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: solid 1px #c4c4c4;
+}
+
+.container-informacoes{
+    background: white;
+    height: 10%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-informacoes p, .container-informacoes a{
+    color: black;
+    text-decoration: none;
+    padding: 50px 0;
+    text-decoration: none;
+}

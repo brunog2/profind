@@ -1,0 +1,171 @@
+body{
+    background-color: #eee;
+}
+
+h3{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-pesquisa{
+    margin-top: 10px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-pesquisa input{
+    transition: 300ms;
+    text-align: left;
+    margin-right: 10px;
+    padding-left: 3%;
+    width: 25%;
+    min-width: 200px;
+    height: 35px;
+    
+    border-radius: 5px;
+    border: solid 1px #a0a0a0;
+}
+
+.container-pesquisa input:focus{
+    transition: 300ms;
+    border: solid 1px #43c4f7;
+
+}
+
+.container-pesquisa button{
+    transition: 300ms;
+    height: 35px;
+    width: 80%;
+    min-width: 80px;
+    color: white;
+    background-color: #43c4f7;
+    border: solid 2px #43c4f7;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.container-pesquisa button:hover{
+    transition: 300ms;
+    background-color: #1fc0ff;
+    color: white;
+    border: solid 2px #1fc0ff;
+}
+
+.bts-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+.navbar-button-profissionais{
+    width: 100px;
+}
+
+.sair{
+    color: red;
+}
+
+.cards-profissonais{
+    text-align: center;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-profissional{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 300px;
+    margin: 15px;
+    border-radius:  5px;
+}
+
+.card-profissional .imagem-profissional{
+    border: solid 1px #c4c4c4;
+    border-radius:  5px 5px 0 0;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+
+.container-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-buttons img{
+    height: 35px;
+}
+
+.container-buttons .like-deslike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 50px;
+    margin: 15px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contato-profissional{
+    transition: 300ms;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    width: 150px;
+    background-color: #43c4f7;
+    border: solid 2px #43c4f7;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+
+.contato-profissional:hover{
+    transition: 300ms;
+    background-color: #23bcf8;
+    color: white;
+    border: solid 2px #23bcf8;
+}
+
+
+.card-profissional footer{
+
+    width: 100%;
+    height: 150px;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.card-profissional footer p{
+    
+    text-align: justify;
+    align-items: baseline;
+    display: flex;
+}
