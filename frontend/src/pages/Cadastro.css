@@ -42,6 +42,17 @@ body, html, .container-principal{
     border: solid 1px #a0a0a0;
 }
 
+.descricao input{
+    transition: 300ms;
+    text-align: center;
+    margin-top: 5px;
+    height: 70px;
+    width: 280px;
+    border-radius: 5px;
+    border: solid 1px #a0a0a0;
+}
+
+
 .container-form-element input:focus{
     transition: 300ms;
     border: solid 1px #43c4f7;

@@ -60,7 +60,7 @@ export default function Indice() {
 
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -72,7 +72,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -81,7 +81,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -97,7 +97,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -109,7 +109,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -118,7 +118,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -133,7 +133,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -145,7 +145,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -154,7 +154,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -169,7 +169,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -181,7 +181,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -190,7 +190,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -205,7 +205,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -217,7 +217,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -226,7 +226,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -243,7 +243,7 @@ export default function Indice() {
 
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -255,7 +255,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -264,7 +264,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -292,7 +292,7 @@ export default function Indice() {
 
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -304,7 +304,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -313,7 +313,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -329,7 +329,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -341,7 +341,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -350,7 +350,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -365,7 +365,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -377,7 +377,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -386,7 +386,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -401,7 +401,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -413,7 +413,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -422,7 +422,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -437,7 +437,7 @@ export default function Indice() {
                         </div>
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -449,7 +449,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -458,7 +458,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 
@@ -475,7 +475,7 @@ export default function Indice() {
 
                         <div className="card-profissional">
 
-                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg"></img>
+                            <img className="imagem-profissional" src="http://blogrh.com.br/wp-content/uploads/2017/11/10-Caracter%C3%ADsticas-que-o-profissional-de-RH-deve-ter.jpg" alt="alt"></img>
                             <footer>
                                 <h2>Ana Carodivna</h2>
                                 <strong>Advogada</strong>
@@ -487,7 +487,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>34</p>
-                                        <img src="https://www.freeiconspng.com/download/39121"></img>
+                                        <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
                                     </button>
 
                                 </div>
@@ -496,7 +496,7 @@ export default function Indice() {
                                 <div className="container-buttons-button">
                                     <button className="like-deslike">
                                         <p>3</p>
-                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png"></img>
+                                        <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
                                     </button>
                                 </div>
 

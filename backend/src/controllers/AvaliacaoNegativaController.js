@@ -1,3 +1,4 @@
+/*
 const Profissional = require('../models/Profissional');
 const Usuario = require('../models/Usuario');
 module.exports = {
@@ -42,3 +43,4 @@ module.exports = {
 
     }
 };
+*/

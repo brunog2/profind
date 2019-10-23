@@ -39,7 +39,7 @@ export default function Conta() {
                 <div className="main-container-profissional">
 
                     <div className="container-picture">
-                        <img className="imagem-profissional" src="https://drive.google.com/uc?authuser=0&id=1E2yDsn4bDOsDTRvehOScfJR6kUNQf4A5&export=download"></img>
+                        <img className="imagem-profissional" src="https://drive.google.com/uc?authuser=0&id=1E2yDsn4bDOsDTRvehOScfJR6kUNQf4A5&export=download" alt="Imagem do profissional"></img>
                         <h2>Talisson da Conceição</h2>
 
                         

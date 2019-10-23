@@ -1,8 +1,8 @@
 const express = require('express');
 const ProfissionalController = require('./controllers/ProfissionalController');
-const UsuarioController = require('./controllers/UsuarioController');
-const AvaliacaoPositivaController = require('./controllers/AvaliacaoPositivaController');
-const AvaliacaoNegativaController = require('./controllers/AvaliacaoNegativaController');
+
+//const AvaliacaoPositivaController = require('./controllers/AvaliacaoPositivaController');
+//const AvaliacaoNegativaController = require('./controllers/AvaliacaoNegativaController');
 const routes = express.Router();
 
 routes.get('/', (req, res) => {
@@ -11,12 +11,16 @@ routes.get('/', (req, res) => {
 });
 
 routes.post('/cadastrarProfissional', ProfissionalController.store);
+routes.post('/verificacaoDeConta', function(req, res){
+    ProfissionalController.encontrar
+});
+routes.post('/test', ProfissionalController.test);
 
-routes.post('/cadastrarUsuario', UsuarioController.store);
 
-routes.post('/profissional/:profissionalId/avaliacoesPositivas', AvaliacaoPositivaController.store);
 
-routes.post('/profissional/:profissionalId/avaliacoesNegativas', AvaliacaoNegativaController.store);
+//routes.post('/profissional/:profissionalId/avaliacoesPositivas', AvaliacaoPositivaController.store);
+
+//routes.post('/profissional/:profissionalId/avaliacoesNegativas', AvaliacaoNegativaController.store);
 
 routes.get('/profissionais', ProfissionalController.index);
 

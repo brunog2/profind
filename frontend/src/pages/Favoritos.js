@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './Favoritos.css';
@@ -86,4 +86,4 @@ export default function Favoritos() {
 
         </div>
     )
-}
+}*/

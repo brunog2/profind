@@ -1,5 +1,5 @@
 const Profissional = require('../models/Profissional');
-const Usuario = require('../models/Usuario');
+
 
 module.exports = {
     async index(req, res) {
@@ -18,6 +18,28 @@ module.exports = {
         return res.json(profissionais);
     },
 
+    async encontrar(req, res) {
+            
+        const {email} = req.headers;
+        const {senha} = req.headers;
+        
+        const validacaoProfissional = await Profissional.find({
+            $and: [
+                { senha: { $e: senha } },
+                { email: { $e: email } },
+
+            ],
+        });
+
+        if (validacaoProfissional != 0){
+
+            return res.json({ok:"true"});
+        }
+
+        
+
+    },
+
     async store(req, res) {
 
         const profissionalJaCadastrado = await Profissional.find({email: req.body.email});
@@ -28,14 +50,7 @@ module.exports = {
             return res.json({message: "Email já cadastrado!"})
         };
 
-        const usuario = await Usuario.create({
-            nome: req.body.nome,
-            email: req.body.email,
-            senha: req.body.senha,
-            url_foto: req.body.url_foto,
-            endereco: req.body.endereco,
-            telefone: req.body.telefone
-        });
+       
 
         const profissional = await Profissional.create({
             nome: req.body.nome,

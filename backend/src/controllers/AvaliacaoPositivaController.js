@@ -1,4 +1,4 @@
-const Profissional = require('../models/Profissional');
+/*const Profissional = require('../models/Profissional');
 const Usuario = require('../models/Usuario');
 module.exports = {
     async store (req, res){
@@ -38,4 +38,4 @@ module.exports = {
         return res.json(usuarioLogado);
 
     }
-};
+};*/
