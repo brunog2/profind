@@ -20,22 +20,17 @@ module.exports = {
 
     async encontrar(req, res) {
             
-        const {email} = req.headers;
-        const {senha} = req.headers;
-        
-        const validacaoProfissional = await Profissional.find({
-            $and: [
-                { senha: { $e: senha } },
-                { email: { $e: email } },
-
-            ],
-        });
+        const {email} = req.body;
+        const {senha} = req.body;
+        console.log("email", email)
+        console.log("senha", senha)
+        const validacaoProfissional = await Profissional.find({senha: senha, email: email});
 
         if (validacaoProfissional != 0){
-
-            return res.json({ok:"true"});
+            return res.json({auth:"true"});
         }
 
+        return res.json({auth:"false"});
         
 
     },

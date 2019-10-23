@@ -11,10 +11,8 @@ routes.get('/', (req, res) => {
 });
 
 routes.post('/cadastrarProfissional', ProfissionalController.store);
-routes.post('/verificacaoDeConta', function(req, res){
-    ProfissionalController.encontrar
-});
-routes.post('/test', ProfissionalController.test);
+routes.post('/verificacaoDeConta', ProfissionalController.encontrar);
+
 
 
 

@@ -8,13 +8,35 @@ export default function Login({ history }) {
     const [senha, setSenha] = useState('');
 
     function handleSubmit(e) {
-       
-        const response = api.post('/verificacaoDeConta', {
-            email,
-            senha
-        })
 
-        console.log(response)
+        console.log(email)
+        console.log(senha)
+
+        const response = api.post('/verificacaoDeConta', {
+            email: email,
+            senha: senha
+        }).then(resposta => {
+
+
+
+
+
+            console.log(resposta.data["auth"]);
+
+
+
+            if (resposta.data["auth"] == "true") {
+                console.log("autenticacao feita")
+                history.push('/profissionais');    
+            }
+            else {
+                console.log("autenticacao nao realizada")
+                alert("Email e/ou senha incorreto(s)")
+            }
+        });
+
+
+
 
 
         e.preventDefault();
@@ -27,38 +49,38 @@ export default function Login({ history }) {
     }
 
 
-    
-
-
-return (
-    <div className="container-principal">
-        <div className="container-form">
-
-
-            <form onSubmit={handleSubmit}>
-                <div className="container-form-element">
-                    <label htmlFor="email">Email</label>
-                    <input value={email} onChange={e => setEmail(e.target.value)} id="email" type="text" placeholder="Digite seu email"></input>
-                </div>
-
-                <div className="container-form-element">
-                    <label htmlFor="senha">Senha</label>
-                    <input value={senha} onChange={e => setSenha(e.target.value)} id="senha" type="password" placeholder="Digite sua senha"></input>
-                </div>
 
 
 
+    return (
+        <div className="container-principal">
+            <div className="container-form">
 
-                <a href="/">Esqueci minha senha</a>
 
-                <p>Ainda não tem uma conta? <Link to="/cadastro">Cadastre-se aqui</Link></p>
+                <form onSubmit={handleSubmit}>
+                    <div className="container-form-element">
+                        <label htmlFor="email">Email</label>
+                        <input value={email} onChange={e => setEmail(e.target.value)} id="email" type="text" placeholder="Digite seu email" required></input>
+                    </div>
+
+                    <div className="container-form-element">
+                        <label htmlFor="senha">Senha</label>
+                        <input value={senha} onChange={e => setSenha(e.target.value)} id="senha" type="password" placeholder="Digite sua senha" required/>
+                    </div>
 
 
-                <button type="submit">Entrar</button>
 
-            </form>
+
+                    <a href="/">Esqueci minha senha</a>
+
+                    <p>Ainda não tem uma conta? <Link to="/cadastro">Cadastre-se aqui</Link></p>
+
+
+                    <button type="submit">Entrar</button>
+
+                </form>
+            </div>
+
         </div>
-
-    </div>
-);
+    );
 }
