@@ -35,6 +35,7 @@ export default function Cadastro({ history }) {
 
         e.preventDefault();
         console.log(response);
+        alert("Cadastro realizado com sucesso!")
         history.push('/login');
     }
 
@@ -45,42 +46,42 @@ export default function Cadastro({ history }) {
                 <form onSubmit={handleSubmit}>
                     <div className="container-form-element">
                         <label htmlFor="nome">Nome</label>
-                        <input value={nome} onChange={e => setNome(e.target.value)} id="nome" type="text" placeholder="Digite seu nome"></input>
+                        <input required value={nome} onChange={e => setNome(e.target.value)} id="nome" type="text" placeholder="Digite seu nome"></input>
                     </div>
 
                     <div className="container-form-element">
                         <label htmlFor="email">Email</label>
-                        <input value={email} onChange={e => setEmail(e.target.value)} id="email" type="text" placeholder="Digite seu email"></input>
+                        <input required value={email} onChange={e => setEmail(e.target.value)} id="email" type="text" placeholder="Digite seu email"></input>
                     </div>
 
                     <div className="container-form-element">
                         <label htmlFor="telefone">Telefone</label>
-                        <input value={telefone} onChange={e => setTelefone(e.target.value)} id="telefone" type="text" placeholder="Digite seu número de telefone"></input>
+                        <input required value={telefone} onChange={e => setTelefone(e.target.value)} id="telefone" type="text" placeholder="Digite seu número de telefone"></input>
                     </div>
 
                     <div className="container-form-element">
                         <label htmlFor="senha">Senha</label>
-                        <input value={senha} onChange={e => setSenha(e.target.value)} id="senha" type="password" placeholder="Crie uma senha"></input>
+                        <input required value={senha} onChange={e => setSenha(e.target.value)} id="senha" type="password" placeholder="Crie uma senha"></input>
                     </div>
 
                     <div className="container-form-element">
                         <label htmlFor="confirmacao-senha">Confirmação de senha</label>
-                        <input value={confirmacaoSenha} onChange={e => setConfirmacaoSenha(e.target.value)} id="confirmacao-senha" type="password" placeholder="Redigite sua senha"></input>
+                        <input required value={confirmacaoSenha} onChange={e => setConfirmacaoSenha(e.target.value)} id="confirmacao-senha" type="password" placeholder="Redigite sua senha"></input>
                     </div>
 
                     <div className="container-form-element">
                         <label htmlFor="endereco">Endereço</label>
-                        <input value={endereco} onChange={e => setEndereco(e.target.value)} id="endereco" type="text" placeholder="Digite seu endereço"></input>
+                        <input required value={endereco} onChange={e => setEndereco(e.target.value)} id="endereco" type="text" placeholder="Digite seu endereço"></input>
                     </div>
 
                     <div className="container-form-element">
                         <label htmlFor="profissao">Profissão</label>
-                        <input value={profissao} onChange={e => setProfissao(e.target.value)} id="profissao" type="text" placeholder="Digite sua profissão"></input>
+                        <input required value={profissao} onChange={e => setProfissao(e.target.value)} id="profissao" type="text" placeholder="Digite sua profissão"></input>
                     </div>
 
                     <div className="container-form-element descricao">
                         <label htmlFor="descricao">Descrição</label>
-                        <input value={descricao} onChange={e => setDescricao(e.target.value)} id="descricao" type="text" placeholder="Descreva o seu trabalho"></input>
+                        <input required value={descricao} onChange={e => setDescricao(e.target.value)} id="descricao" type="text" placeholder="Descreva o seu trabalho"></input>
                     </div>
 
                     <p>Ao se registrar, você concorda com nossos <a href="/termos">Termos de Uso</a></p>
