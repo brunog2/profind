@@ -8,7 +8,7 @@ module.exports = {
         });
     },
 
-    async encontrar(req, res) {            
+    async autenticar(req, res) {            
         const {email} = req.body;
         const {senha} = req.body;        
         const validacaoProfissional = await Profissional.find({senha: senha, email: email});
@@ -16,6 +16,16 @@ module.exports = {
             return res.json({auth:"true"});
         }
         return res.json({auth:"false"});
+    },
+
+    async encontrar(req, res){
+        
+        const {textoPesquisa} = req.query;
+        console.log(`Pesquisando profissionais com a seguinte palavra-chave: ${textoPesquisa}`)
+        const resultadoPesquisa = await Profissional.find({$or: [{profissao: {$regex : textoPesquisa}}, {nome: {$regex: textoPesquisa}}]}).then(resposta => {
+            return res.json(resposta);
+        });
+        
     },
 
     async store(req, res) {

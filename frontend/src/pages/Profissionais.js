@@ -1,4 +1,4 @@
-import React, { useState, Component} from 'react';
+import React, { useState, Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './Profissionais.css';
@@ -11,18 +11,18 @@ export default function Profissinais() {
 
 
 
-    
+
 
     async function loadProfissionais() {
         const response = await api.get('/profissionais');
         console.log(response.data);
-        if (profissionais.length == 0){
+        if (profissionais.length == 0) {
             setProfissionais(response.data)
         }
     };
 
     loadProfissionais();
-    
+
     return (
         <div className="main-container">
 
@@ -43,17 +43,20 @@ export default function Profissinais() {
             </div>
 
             <div className="container-pesquisa">
-                <input id="pesquisa" type="text" placeholder="Pesquisar"></input>
-                <Link to="/resultado">
+                <form action="/pesquisaProfissional/?textoPesquisa=q">
+                    <input value={textoPesquisa} id="pesquisa" type="text" placeholder="Pesquisar"></input>
                     <button>Ok</button>
-                </Link>
+
+
+                </form>
+
             </div>
 
             <div className="container-profissionais-titulo">
                 <p className=""><strong>Profissionais</strong></p>
             </div>
-            
-            {profissionais.map(profissionais => (
+
+            {profissionais.map(profissional => (
                 <div className="container-profissionais">
 
                     <div className="cards-profissonais">
@@ -61,11 +64,11 @@ export default function Profissinais() {
 
                         <div className="card-profissional">
 
-                            <img src={profissionais.url_img} className="imagem-profissional" alt="Imagem do profissional"></img>
+                            <img src={profissional.url_img} className="imagem-profissional" alt="Imagem do profissional"></img>
                             <footer>
-                                <h2>Ana Carolina</h2>
-                                <strong>Advogada</strong>
-                                <p>Trabalho com advocacia há mais de 15 anos e levo meu trabalho muito a sério.</p>
+                                <h2>{profissional.nome}</h2>
+                                <strong>{profissional.profissao}</strong>
+                                <p>{profissional.descricao}</p>
                             </footer>
 
                             <div className="container-buttons">
