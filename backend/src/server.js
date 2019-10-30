@@ -3,11 +3,14 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const server = express();
 const cors = require('cors');
+
+require('dotenv').config()
+
 server.use(cors());
 server.use(express.static('assets'));
 var port = 3333;
 
-mongoose.connect('mongodb://encontreprofissionais:encontreprofissionais@cluster0-shard-00-00-vochj.mongodb.net:27017,cluster0-shard-00-01-vochj.mongodb.net:27017,cluster0-shard-00-02-vochj.mongodb.net:27017/encontreprofissionais?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGO_URI,
     {useNewUrlParser: true}
 );
 
