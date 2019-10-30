@@ -10,12 +10,12 @@ class UploadTest extends Component {
             file: null
         };
         this.onFormSubmit = this.onFormSubmit.bind(this);
-        this.onChange = this.onChange.bind(this);
+        
     }
-    onFormSubmit(e){
+    onChange(e){
         e.preventDefault();
         const formData = new FormData();
-        formData.append('myImage',this.state.file);
+        formData.append('myImage',e.target.files[0]);
         const config = {
             headers: {
                 'content-type': 'multipart/form-data'
@@ -26,9 +26,6 @@ class UploadTest extends Component {
                 alert("The file is successfully uploaded");
             }).catch((error) => {
         });
-    }
-    onChange(e) {
-        this.setState({file:e.target.files[0]});
     }
 
     render() {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Cadastro.css';
 import api from '../services/api';
+import Upload from './UploadTest';
 
 export default function Cadastro({ history }) {
 
@@ -13,12 +14,60 @@ export default function Cadastro({ history }) {
     const [endereco, setEndereco] = useState('');
     const [profissao, setProfissao] = useState('');
     const [descricao, setDescricao] = useState('');
+    const [url_foto, setUrl_Foto] = useState('');
+    
+
+    this.state = {
+        nome: null,
+        email: null,
+        telefone: null,
+        senha: null,
+        confirmacaoSenha: null,
+        endereco: null,
+        profissao: null,
+        descricao: null,
+        url_foto: null
+    }
+
+
+
+    async function onChange(e) {
+        
+        
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('myImage', e.target.files[0]);
+        const config = {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        };
+        const response = await api.post("/uploadImage", formData, config).then((response) => {
+            console.log(response);
+            var a = []
+            a = response.data
+            console.log(a.file.path)
+            setUrl_Foto(a.file.path)
+            console.log(url_foto)
+          })
+          .catch(function (error) {
+            console.log(error);
+         });
+
+
+        
+        
+
+    }
 
 
 
     function handleSubmit(e) {
 
-        const response = api.post('/cadastrarProfissional', {
+        console.log(url_foto)
+
+
+        api.post('/cadastrarProfissional', {
             nome,
             email,
             senha,
@@ -26,7 +75,7 @@ export default function Cadastro({ history }) {
             descricao,
             endereco,
             telefone,
-            url_foto: "null",
+            url_foto,
             avaliacoes_negativas: 0,
             avaliacoes_positivas: 0,
         })
@@ -34,10 +83,11 @@ export default function Cadastro({ history }) {
 
 
         e.preventDefault();
-        console.log(response);
+
         alert("Cadastro realizado com sucesso!")
         history.push('/login');
     }
+
 
     return (
         <div className="container-principal">
@@ -46,7 +96,7 @@ export default function Cadastro({ history }) {
                 <form onSubmit={handleSubmit}>
                     <div className="container-form-element">
                         <label htmlFor="nome">Nome</label>
-                        <input required value={nome} onChange={e => setNome(e.target.value)} id="nome" type="text" placeholder="Digite seu nome"></input>
+                        <input required value={nome} onChange={e => this.setState(e.target.value)} id="nome" type="text" placeholder="Digite seu nome"></input>
                     </div>
 
                     <div className="container-form-element">
@@ -82,6 +132,11 @@ export default function Cadastro({ history }) {
                     <div className="container-form-element descricao">
                         <label htmlFor="descricao">Descrição</label>
                         <input required value={descricao} onChange={e => setDescricao(e.target.value)} id="descricao" type="text" placeholder="Descreva o seu trabalho"></input>
+                    </div>
+
+                    <div className="container-form-element">
+                        <label htmlFor="foto">Foto</label>
+                        <input className="foto" type="file" name="myImage" onChange={e => onChange(e)} />
                     </div>
 
                     <p>Ao se registrar, você concorda com nossos <a href="/termos">Termos de Uso</a></p>
