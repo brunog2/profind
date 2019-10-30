@@ -18,8 +18,7 @@ module.exports = function (req, res) {
     upload(req, res, (err) => {
         console.log("Request ---", req.body);
         console.log("Request file ---", req.file);//Here you get file.
-        return res.json({file: req.file});
-        /*Now do where ever you want to do*/
+        return res.json({file: req.file});/*Now do where ever you want to do*/
         if (!err)
             return res.send(200).end();
         

@@ -10,12 +10,14 @@ class UploadTest extends Component {
             file: null
         };
         this.onFormSubmit = this.onFormSubmit.bind(this);
-        
+        this.onChange = this.onChange.bind(this);
     }
-    onChange(e){
+    onFormSubmit(e){
+        console.log(this.state.file)
         e.preventDefault();
         const formData = new FormData();
-        formData.append('myImage',e.target.files[0]);
+
+        formData.append('myImage',this.state.file);
         const config = {
             headers: {
                 'content-type': 'multipart/form-data'
@@ -23,9 +25,15 @@ class UploadTest extends Component {
         };
         api.post("/uploadImage",formData,config)
             .then((response) => {
+                console.log(response.data.file.path)
                 alert("The file is successfully uploaded");
             }).catch((error) => {
         });
+    }
+    onChange(e) {
+        
+        this.setState({file:e.target.files[0]});
+        
     }
 
     render() {

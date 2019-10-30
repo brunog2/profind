@@ -1,4 +1,5 @@
 import { BrowserRouter, Route } from 'react-router-dom';
+import history from './history';
 import Indice from './pages/Indice';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
@@ -19,7 +20,7 @@ export default function Routes(){
 
             <Route path="/" exact component={Indice}/>
             <Route path="/login" component={Login}/>
-            <Route path="/cadastro" component={Cadastro}/>
+            <Route path="/cadastro" component={Cadastro} history={history}/>
             <Route path="/profissionais" component={Profissionais}/>
             <Route path="/profissional/:id" component={Profissional}/>
             <Route path="/resultado" component={Resultado}/>                          
