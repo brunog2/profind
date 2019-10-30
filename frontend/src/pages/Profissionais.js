@@ -44,7 +44,7 @@ export default function Profissinais() {
 
             <div className="container-pesquisa">
                 <form action="/pesquisaProfissional/?textoPesquisa=q">
-                    <input value={textoPesquisa} id="pesquisa" type="text" placeholder="Pesquisar"></input>
+                    <input value={this.textoPesquisa} id="pesquisa" type="text" placeholder="Pesquisar"></input>
                     <button>Ok</button>
 
 

@@ -22,7 +22,9 @@ module.exports = {
         
         const {textoPesquisa} = req.query;
         console.log(`Pesquisando profissionais com a seguinte palavra-chave: ${textoPesquisa}`)
-        const resultadoPesquisa = await Profissional.find({$or: [{profissao: {$regex : textoPesquisa}}, {nome: {$regex: textoPesquisa}}]}).then(resposta => {
+        const resultadoPesquisa = await Profissional.find({$or: [{profissao: {$regex : new RegExp(textoPesquisa, "i")}}, {nome: {$regex: new RegExp(textoPesquisa, "i")}}]}).then(resposta => {
+            console.log(Profissional.profissao)
+            console.log(typeof Profissional.profissao)
             return res.json(resposta);
         });
         
