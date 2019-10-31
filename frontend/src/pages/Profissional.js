@@ -1,80 +1,84 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './Profissional.css';
+import api from '../services/api';
 
 
-export default function Profissional() {
-    return (
-        <div>
+export default class Profissional extends Component {
 
 
-            <div className="navbar-container">
+    constructor(props) {
+        super(props);
 
-                <nav className="navbar">
+        this.state = {
+            id: props.match.params.id,
+            profissional: []
+        };        
+    }
 
-                    <Link className="brand nav-link" to="/profissionais">
-                        <img className="logo" src={logo} alt="Logo"></img>
-                    </Link>
+    componentWillMount(){
+        api.get(`/pesquisarPorId?id=${this.state.id}`).then(response => {
+            console.log(response.data)
+            this.setState({profissional: response.data})
+            console.log(this.state.profissional)
+        })
+    }
 
-                    <div className="bts-right">
-                        <Link to="/favoritos">
-                            <button className="navbar-button navbar-button-profissionais">Meus favoritos</button>
+
+
+
+    render() {
+        return (
+            <div>
+
+
+                <div className="navbar-container">
+
+                    <nav className="navbar">
+
+                        <Link className="brand nav-link" to="/profissionais">
+                            <img className="logo" src={logo} alt="Logo"></img>
                         </Link>
 
-                        <Link to="/conta">
-                            <button className="navbar-button navbar-button-profissionais">Minha conta</button>
-                        </Link>
+                        <div className="bts-right">
 
-                        <Link to="/">
-                            <button className="navbar-button navbar-button-profissionais sair">Sair</button>
-                        </Link>
-                    </div>
+                            <Link to="/conta">
+                                <button className="navbar-button navbar-button-profissionais">Minha conta</button>
+                            </Link>
 
-                </nav>
-
-            </div>
-            <div className="main-container-profissional">
-
-                <div className="container-picture">
-                    <img className="imagem-profissional" alt="alt"></img>
-                    <h2>Ana Carodivna</h2>
-
-                    <div className="container-buttons-profissional">
-
-                        <div className="container-buttons-profissional-button">
-                            <button className="like-deslike">
-                                <p>34</p>
-                                <img src="https://www.freeiconspng.com/download/39121" alt="alt"></img>
-                            </button>
-
+                            <Link to="/">
+                                <button className="navbar-button navbar-button-profissionais sair">Sair</button>
+                            </Link>
                         </div>
 
-                        <div className="container-buttons-profissional-button">
-                            <button className="like-deslike">
-                                <p>3</p>
-                                <img src="http://pngimg.com/uploads/dislike/dislike_PNG63.png" alt="alt"></img>
-                            </button>
-                        </div>
-                    </div>
+                    </nav>
 
                 </div>
-                <div className="container-descricao">
-                    <h2>Advogada</h2>
-                    <p>Trabalho com advocacia há mais de 15 anos e levo meu trabalho muito a sério.</p>
-                    <div>
-                        <p>
-                            Localização: Maceió/AL
-                    </p>
-                        <p>
-                            Número de telefone: (82) 99999-9999
-                    </p>
-                        <p>
-                            Email: anacarodivna@advocacia.com
-                    </p>
+                <div className="main-container-profissional">
+
+                    <div className="container-picture">
+                        <img src={require(`./assets/images/${this.state.profissional.url_foto}`)} className="imagem-profissional" alt="Imagem do profissional"></img>
+                        <h2>{this.state.profissional.nome}</h2>
+
+
+
+
+                    </div>
+                    <div className="container-descricao">
+                        <h2>{this.state.profissional.profissao}</h2>
+                        <p>{this.state.profissional.descricao}</p>
+                        <div>
+                            <p>Localização: {this.state.profissional.endereco}</p>
+                            <p>Telefone: {this.state.profissional.telefone}</p>
+                            <p>Email: {this.state.profissional.email}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    );
+            </div >
+        );
+
+    }
+
 }
+

@@ -14,6 +14,7 @@ routes.get('/', (req, res) => {
 routes.post('/cadastrarProfissional', ProfissionalController.store);
 routes.post('/verificacaoDeConta', ProfissionalController.autenticar);
 routes.get('/pesquisarProfissional', ProfissionalController.encontrar);
+routes.get('/pesquisarPorId', ProfissionalController.encontrarPorId);
 
 routes.post('/uploadImage', UploadImageController)
 

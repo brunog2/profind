@@ -18,13 +18,20 @@ module.exports = {
         return res.json({auth:"false"});
     },
 
+
+    async encontrarPorId(req, res){
+        const {id} = req.query;
+        console.log("Procurando profissional com o id "+id)
+        const resultadoPesquisa = await Profissional.findById(id).then(resposta => {            
+            return res.json(resposta);
+        });  
+    },
+
     async encontrar(req, res){
         
         const {textoPesquisa} = req.query;
         console.log(`Pesquisando profissionais com a seguinte palavra-chave: ${textoPesquisa}`)
-        const resultadoPesquisa = await Profissional.find({$or: [{profissao: {$regex : new RegExp(textoPesquisa, "i")}}, {nome: {$regex: new RegExp(textoPesquisa, "i")}}]}).then(resposta => {
-            console.log(Profissional.profissao)
-            console.log(typeof Profissional.profissao)
+        const resultadoPesquisa = await Profissional.find({$or: [{profissao: {$regex : new RegExp(textoPesquisa, "i")}}, {nome: {$regex: new RegExp(textoPesquisa, "i")}}]}).then(resposta => {            
             return res.json(resposta);
         });
         

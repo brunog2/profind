@@ -17,7 +17,6 @@ export default function Routes(){
     return(
         <BrowserRouter>
             <Route path="/uploadTest" exact component={UploadTest}/>
-
             <Route path="/" exact component={Indice}/>
             <Route path="/login" component={Login}/>
             <Route path="/cadastro" component={Cadastro} history={history}/>
