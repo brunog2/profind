@@ -10,18 +10,21 @@ export default class Profissional extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             id: props.match.params.id,
-            profissional: []
+            profissional: [],
+            url: null
         };        
     }
 
-    componentWillMount(){
+    componentDidMount(){
+        console.log("entrou no componentdidmount")
         api.get(`/pesquisarPorId?id=${this.state.id}`).then(response => {
             console.log(response.data)
-            this.setState({profissional: response.data})
-            console.log(this.state.profissional)
+            this.setState({profissional: response.data, url_foto: require(`./assets/images/${response.data.url_foto}`)})
+            
+
+            console.log(this.state.profissional.url_foto)
         })
     }
 
@@ -58,7 +61,7 @@ export default class Profissional extends Component {
                 <div className="main-container-profissional">
 
                     <div className="container-picture">
-                        <img src={require(`./assets/images/${this.state.profissional.url_foto}`)} className="imagem-profissional" alt="Imagem do profissional"></img>
+                        <img src={this.state.url_foto} className="imagem-profissional" alt={this.state.profissional.nome}></img>
                         <h2>{this.state.profissional.nome}</h2>
 
 

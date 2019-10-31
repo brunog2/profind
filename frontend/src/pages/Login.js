@@ -16,22 +16,14 @@ export default function Login({ history }) {
             email: email,
             senha: senha
         }).then(resposta => {
-            console.log(resposta.data["auth"]);
             if (resposta.data["auth"] == "true") {
-                console.log("autenticacao feita")
                 history.push('/profissionais');    
             }
             else {
-                console.log("autenticacao nao realizada")
                 alert("Email e/ou senha incorreto(s)!")
             }
         });
         e.preventDefault();
-        /*
-        if (response = ) {
-            history.push('/profissionais');
-            
-        };*/
     }
 
     return (

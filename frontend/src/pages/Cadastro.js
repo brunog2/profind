@@ -2,8 +2,6 @@ import React, { useState, Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import './Cadastro.css';
 import api from '../services/api';
-import Upload from './UploadTest';
-import history from '../history';
 
 class Cadastro extends Component {
 
@@ -34,18 +32,8 @@ class Cadastro extends Component {
         this.setState({ file: e.target.files[0] });
     }
 
-
-
-
-
-
-
-
-
     async handleSubmit(e) {
         e.preventDefault()
-        console.log(this.state.file)
-
         const formData = new FormData();
         formData.append('myImage', this.state.file);
         const config = {
@@ -56,13 +44,7 @@ class Cadastro extends Component {
 
         await api.post("/uploadImage", formData, config)
             .then((response) => {
-                console.log(response.data.file.filename)
                 this.setState({ url_foto: response.data.file.filename })
-                console.log(this.state.url_foto)
-                alert("The file is successfully uploaded");
-
-
-
             }).catch((error) => {
             });
 
@@ -70,6 +52,7 @@ class Cadastro extends Component {
             nome: this.state.nome,
             email: this.state.email,
             senha: this.state.senha,
+            confirmacaoSenha: this.state.confirmacaoSenha,
             profissao: this.state.profissao,
             descricao: this.state.descricao,
             endereco: this.state.endereco,
@@ -77,11 +60,24 @@ class Cadastro extends Component {
             url_foto: this.state.url_foto,
             avaliacoes_negativas: 0,
             avaliacoes_positivas: 0,
-        })
-        alert("Cadastro realizado com sucesso!")
-        this.setState({
-            redirect: true
-        })
+        }).then((response) => {
+            console.log(response)
+            if (response.data["cadastro"] == "err_senha"){
+                alert("Senhas não conferem!")
+            }
+            else if (response.data["cadastro"] == "err_email"){
+                alert("Email já cadastrado no sistema!")
+            }
+            else if (response.data["cadastro"] == "err_telefone"){
+                alert("Telefone já cadastrado no sistema!")
+            }
+            else if (response.data["cadastro"] == "cadastrado") {
+                alert("Cadastro realizado com sucesso! Agora você está visível para todos lhe verem no sistema")
+                this.setState({
+                    redirect: true
+                })
+            }
+        });
     }
 
     render() {

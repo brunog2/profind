@@ -39,11 +39,16 @@ module.exports = {
 
     async store(req, res) {
         const profissionalJaCadastrado = await Profissional.find({email: req.body.email});
+        const verificaTelefone = await Profissional.find({telefone: req.body.telefone});
         if (profissionalJaCadastrado.length != 0){
-            console.log("Email já cadastrado!");
-            return res.json({message: "Email já cadastrado!"})
-        };
-
+            return res.json({cadastro: "err_email"})
+        }
+        else if (verificaTelefone.length != 0){
+            return res.json({cadastro: "err_telefone"})
+        }
+        else if (req.body.senha != req.body.confirmacaoSenha){
+            return res.json({cadastro: "err_senha"})
+        }
         const profissional = await Profissional.create({
             nome: req.body.nome,
             email: req.body.email,
@@ -56,8 +61,6 @@ module.exports = {
             endereco: req.body.endereco,
             telefone: req.body.telefone
         });
-
-        console.log("Novo profissional cadastrado com as seguintes informações: ", req.body);
-        return res.json(profissional);
+        return res.json({cadastro: "cadastrado"});
     }
 };
